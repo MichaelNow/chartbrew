@@ -2,7 +2,7 @@ import {
   describe, it, expect, beforeAll
 } from "vitest";
 import request from "supertest";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { TOTP } from "otpauth";
 
 import { createTestAppWithUserRoutes } from "../helpers/testApp.js";

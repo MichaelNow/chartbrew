@@ -1,7 +1,7 @@
 const simplecrypt = require("simplecrypt");
 const { v4: uuid } = require("uuid");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { nanoid } = require("nanoid");
 const { TOTP } = require("otpauth");
 const QRCode = require("qrcode");

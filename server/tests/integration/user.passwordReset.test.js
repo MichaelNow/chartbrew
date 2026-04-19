@@ -2,7 +2,7 @@ import {
   describe, it, expect, beforeAll, vi
 } from "vitest";
 import request from "supertest";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { createRequire } from "module";
 
 import { testDbManager } from "../helpers/testDbManager.js";

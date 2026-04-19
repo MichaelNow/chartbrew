@@ -4,13 +4,13 @@
   "version": "v4.9.0",
   "type": "module",
   "scripts": {
-    "start": "echo n | cp -vipr ../.env .env | true && npm run prepareSettings && vite",
-    "dev": "echo n | cp -vipr ../.env .env | true && npm run prepareSettings && vite",
+    "start": "if not exist .env copy ..\\.env .env && npm run prepareSettings && vite",
+    "dev": "npm run prepareSettings && vite",
     "build": "npm run prepareSettings && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "prepareSettings": "echo n | cp -vipr src/config/settings.template.js src/config/settings.js | true"
+    "prepareSettings": "if not exist src\\config\\settings.js copy src\\config\\settings.template.js src\\config\\settings.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.0",
